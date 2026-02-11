@@ -2,14 +2,15 @@
  STM32 Digital Clock
 Digital Clock with RTC, Alarm, Countdown Timer
 
-*Giới thiệu: Đây là project đồng hồ điện tử đa năng sử dụng vi điều khiển STM32F103C8T6, khai thác RTC nội, hiển thị bằng LED 7 đoạn, điều khiển qua nút nhấn, có các chức năng:
+*Giới thiệu: project đồng hồ điện tử đa năng sử dụng vi điều khiển STM32F103C8T6, khai thác RTC nội, hiển thị bằng LED 7 đoạn, điều khiển qua nút nhấn, có các chức năng:
 Hiển thị thời gian thực
 - Chỉnh giờ / phút
 - Báo thức (Alarm)
 - Đếm ngược (Countdown)
 - Thông báo bằng buzzer
 Project được xây dựng theo FSM (Finite State Machine), lập trình bare-metal (CMSIS).
-  * Phần cứng sử dụng
+
+* Phần cứng sử dụng
 Vi điều khiển: STM32F103C8T6
 2 module LED 7 đoạn 4 số ghép nối tiếp. Sử dụng IC ghi dịch 74HC595 để quét LED 7 đoạn
 Nút nhấn (MODE, UP, DOWN, OK, COUNTDOWN)
@@ -22,23 +23,23 @@ Nút nhấn	GPIO (input pull-up)
 LED 7 đoạn	GPIO multiplex
 RTC nội STM32
 * Chức năng chính
-1. Hiển thị thời gian HH:MM:SS từ RTC nội và cập nhật liên tục
-
-2️. Chỉnh thời gian
+  1. Hiển thị thời gian HH:MM:SS từ RTC nội và cập nhật liên tục
+  
+  2. Chỉnh thời gian
 Nhấn UP / DOWN để chỉnh giờ
 Nhấn OK → chuyển sang chỉnh phút
 Thời gian RTC vẫn chạy, không bị dừng
 Hiển thị dạng:
 --.HH.MM.SS
 
-3️. Báo thức (Alarm)
+  3. Báo thức (Alarm)
 Nhấn SET ALARM
 Hiển thị: SA.HH.MM.SS
 Chỉnh giờ → phút → giây
 Khi đến thời gian cài đặt:
 Buzzer kêu
 LED 7 đoạn hiển thị SA.HH.MM.SS
-4️. Đếm ngược (Countdown)
+  4. Đếm ngược (Countdown)
 Nhấn SET COUNTDOWN
 Hiển thị: CD.MM.SS
 Chỉ đếm ngược phút và giây
