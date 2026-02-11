@@ -8,10 +8,10 @@ Hiển thị thời gian thực
 - Báo thức (Alarm)
 - Đếm ngược (Countdown)
 - Thông báo bằng buzzer
-Project được xây dựng theo FSM (Finite State Machine), không dùng HAL, lập trình bare-metal (CMSIS).
+Project được xây dựng theo FSM (Finite State Machine), lập trình bare-metal (CMSIS).
   * Phần cứng sử dụng
 Vi điều khiển: STM32F103C8T6
-2 module LED 7 đoạn 4 số ghép nối tiếp. Sử dụng IC ghi dịch 74HC595 để quét LED 7 đoạnv
+2 module LED 7 đoạn 4 số ghép nối tiếp. Sử dụng IC ghi dịch 74HC595 để quét LED 7 đoạn
 Nút nhấn (MODE, UP, DOWN, OK, COUNTDOWN)
 Buzzer active 3.3V
 
